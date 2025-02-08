@@ -27,7 +27,7 @@ model.generateContent(req.body.question).then(result=>{
 })
 })
 
-app.use('*',()=>{
+app.get('*',(req,res)=>{
     res.status(404).json({
         msg:'bad request'
     })
